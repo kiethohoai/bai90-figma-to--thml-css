@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figma to HTML</title>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./reset.css" />
+
+  <!-- Fonts Embed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+    rel="stylesheet" />
+  <!-- CSS Config -->
+  <link rel="stylesheet" href="./style1.css" />
+
+  <!-- THIS MAIN -->
+</head>
+
+<body style="height: 10000px">
+  <!-- Header chua head, fixed lam hieu ung sticky neo header lai -->
+  <header class="header fixed">
+    <div class="main-content">
+      <div class="body">
+        <!-- 1. logo -->
+        <img src="./assets/img/logo.svg" alt="logo-main" class="logo" />
+
+        <!-- 2. nav -->
+        <nav class="nav">
+          <ul>
+            <li class="active"><a href="">Menu</a></li>
+            <li><a href="">Courses</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Reviews</a></li>
+          </ul>
+        </nav>
+
+        <!-- 3. btn action -->
+        <div class="action">
+          <a href="#!" class="btn btn-sign-up">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main">
+    <div class="hero">
+      <div class="main-content">
+        <div class="body">
+          <!-- 1. Hero Left -->
+          <div class="media-block">
+            <img class="img" src="./assets/img/hero-img.jpg" alt="anh-dep-trai" />
+            <div class="hero-summary">
+              <!-- a. item1 -->
+              <div class="item">
+                <div class="icon">
+                  <img src="./assets/icon/des.svg" alt="" />
+                </div>
+                <div class="info">
+                  <p class="label">20 Courses</p>
+                  <p class="title">UI/UX Design</p>
+                </div>
+              </div>
+              <!-- b.item2 -->
+              <div class="item">
+                <div class="icon icon2">
+                  <img src="./assets/icon/dev.svg" alt="" />
+                </div>
+                <div class="info">
+                  <p class="label">20 Courses</p>
+                  <p class="title">Development</p>
+                </div>
+              </div>
+              <!-- c.item3 -->
+              <div class="item">
+                <div class="icon icon3">
+                  <img src="./assets/icon/marketing.svg" alt="" />
+                </div>
+                <div class="info">
+                  <p class="label">30 Courses</p>
+                  <p class="title">Marketing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2. Hero Right -->
+          <div class="content-block">
+            <!-- heading -->
+            <h1 class="heading">
+              Learn without limits and spread knowledge.
+            </h1>
+            <!-- p-tag -->
+            <p class="desc">
+              Build new skills for that “this is my year” feeling with
+              courses, certificates, and degrees from world-class universities
+              and companies.
+            </p>
+            <!-- call to action cta-group -->
+            <div class="cta-group">
+              <a href="#!" class="btn hero-cta">See Courses</a>
+              <button class="watch-video">
+                <div class="icon">
+                  <img src="./assets/icon/play.svg" alt="" />
+                </div>
+                <span>Watch Video</span>
+              </button>
+            </div>
+            <!-- p-tag -->
+            <p class="desc desc-recent">Recent engagement</p>
+            <!-- p-tag -->
+            <p class="desc stats">
+              <strong>50K</strong>Students
+              <strong>70+</strong>Courses
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

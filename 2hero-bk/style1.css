@@ -1,0 +1,299 @@
+* {
+  /* Thiết lập  */
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #FFB900;
+}
+
+html {
+  /* Đổi đơn vị 1rem = 16px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 1. COMMOM */
+a {
+  text-decoration: none;
+}
+
+/* Độ rộng của phần nội dung */
+.main-content {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Xử lý content bị sát lề khi co trình duyệt */
+  max-width: calc(100% - 48px);
+}
+
+/* Thiết lập các btn chung */
+.btn {
+  /* Thiết lập inline-> InlineBlock Để thêm Padding vào */
+  display: inline-block;
+  padding: 0% 16px;
+  line-height: 50px;
+  /* Chiều rộng của nút được lấy từ giá trị chung của các nút trong figma */
+  min-width: 118px;
+  /* Set*/
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #171100;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* 2. HEADER */
+.header {
+  background: #fffcf4;
+}
+
+/* Lam hieu ung Head Neo Body */
+.header.fixed {
+  z-index: 1;
+  position: sticky;
+  top: -28px;
+}
+
+.header .body {
+  /* Xoay 3 khoi log, nav, but ngang */
+  display: flex;
+  /* Canh giua theo chieu cross-asix */
+  align-items: center;
+  /* Canh nut btn-sign-up*/
+  padding: 36px 0 8px;
+}
+
+.nav ul {
+  /* Xoay 3 khoi nam ngang */
+  display: flex;
+}
+
+/* 2.1 LOGO */
+
+/* 2.2 NAV */
+/* Đẩy khối nav btn sang bên phải, căn thằng nav kéo theo thằng btn kéo theo */
+.nav {
+  margin-left: auto;
+}
+
+/* Chỉnh 3 nút của nav */
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  /* Canh khoảng cách giữa các nút menu */
+  /* background-color: red; */
+  padding: 8px 21px;
+  /* Xử lý phần gạch chân, đây là thằng cha*/
+  position: relative;
+}
+
+/* Hover vào các phần tử của nav để nó đổi màu */
+.nav li.active a,
+.nav a:hover {
+  /* Hover vào bị giật giật kích thước */
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+
+/* Thêm phần _ chân ở nút Home */
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  /* width height ko set được nếu phần tử là inline */
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+
+/* Để điều chỉnh gạch chân dùng position relative + absolute */
+
+/* 2.3 BTN-SIGN-UP */
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
+
+/* HERO=================================== */
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* HERO LEFT=============================== */
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+
+.hero .content-block {
+  width: 52%;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-summary {
+  padding: 24px;
+  width: 270px;
+  /* height: 244px; */
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF9E8;;
+}
+
+.hero-summary .icon2 {
+  background-color: #FCEFFF;;
+}
+
+.hero-summary .icon3 {
+  background-color: #EBEAFF;;
+}
+
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  color: #5F5B53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.hero-summary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+/* HERO RIGHT=============================== */
+.hero .content-block {
+  padding-left: 130px;
+  padding-top: 64px;
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17; /* 117.241% */
+  letter-spacing: -1.16px;
+}
+
+.hero .desc {
+  margin-top: 22px;
+  color: #5F5B53;
+  font-size: 1.8rem;
+   font-weight: 400;
+  line-height: 1.67;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+
+.hero .watch-video {
+  border: none;
+  background: transparent;
+  display: flex;
+  margin-left: 28px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #FFF;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+
+.hero .watch-video span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  margin-left: 14px;
+}
+
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats {
+  margin-top: 8px;
+}
+
+.hero .stats strong {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+  margin-right: 15px;
+}
+
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
+}

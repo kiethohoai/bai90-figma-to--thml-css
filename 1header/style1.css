@@ -1,0 +1,121 @@
+* {
+  /* Thiết lập  */
+  box-sizing: border-box;
+}
+html {
+  /* Đổi đơn vị 1rem = 16px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 1. COMMOM */
+a {
+  text-decoration: none;
+}
+
+/* Độ rộng của phần nội dung */
+.main-content {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Xử lý content bị sát lề khi co trình duyệt */
+  max-width: calc(100% - 48px);
+}
+
+/* Thiết lập các btn chung */
+.btn {
+  /* Thiết lập inline-> InlineBlock Để thêm Padding vào */
+  display: inline-block;
+  padding: 0% 16px;
+  line-height: 50px;
+  /* Chiều rộng của nút được lấy từ giá trị chung của các nút trong figma */
+  min-width: 118px;
+  /* Set*/
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+
+/* 2. HEADER */
+.header {
+  background: #fffcf4;
+}
+
+/* Lam hieu ung Head Neo Body */
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+
+.header .body {
+  /* Xoay 3 khoi log, nav, but ngang */
+  display: flex;
+  /* Canh giua theo chieu cross-asix */
+  align-items: center;
+  /* Canh nut btn-sign-up*/
+  padding: 36px 0 8px;
+}
+
+.nav ul {
+  /* Xoay 3 khoi nam ngang */
+  display: flex;
+}
+
+/* 2.1 LOGO */
+
+/* 2.2 NAV */
+/* Đẩy khối nav btn sang bên phải, căn thằng nav kéo theo thằng btn kéo theo */
+.nav {
+  margin-left: auto;
+}
+
+/* Chỉnh 3 nút của nav */
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  /* Canh khoảng cách giữa các nút menu */
+  /* background-color: red; */
+  padding: 8px 21px;
+  /* Xử lý phần gạch chân, đây là thằng cha*/
+  position: relative;
+}
+
+/* Hover vào các phần tử của nav để nó đổi màu */
+.nav li.active a,
+.nav a:hover {
+  /* Hover vào bị giật giật kích thước */
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+
+/* Thêm phần _ chân ở nút Home */
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  /* width height ko set được nếu phần tử là inline */
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+
+/* Để điều chỉnh gạch chân dùng position relative + absolute */
+
+/* 2.3 BTN-SIGN-UP */
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
